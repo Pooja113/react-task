@@ -21,6 +21,7 @@ const JobForm = () => {
       type:CREATE_JOBS,
       payload: {posts : res}
     });
+    setJobPost({ desc: ''})
     navigate('/')
     })
     .catch((err)=>console.log(err))
