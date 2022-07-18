@@ -27,6 +27,7 @@ const JobForm = () => {
     .catch((err)=>console.log(err))
    
   }
+
   return (
     <section id='jobpost'> 
     {user ? 

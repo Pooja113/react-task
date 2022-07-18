@@ -7,6 +7,7 @@ import JobsList from "./components/JobsList/JobsList";
 import JobForm from "./components/JobForm/JobForm";
 import { useStateValue } from "./StateProvider";
 import { auth } from './firebase';
+import PostDetails from "./components/PostDetails/PostDetails";
 
 
 function App() {
@@ -37,6 +38,16 @@ function App() {
             <Header />
             <JobForm />
             <JobsList />
+            <Footer />
+
+          </React.Fragment>
+        } />
+
+        <Route exact path="/post/:id"  element={
+          <React.Fragment> 
+            <Header />
+            
+            <PostDetails />
             <Footer />
 
           </React.Fragment>

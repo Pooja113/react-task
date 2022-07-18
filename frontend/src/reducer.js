@@ -1,4 +1,4 @@
-import { SET_USER, FETCH_ALL_JOBS,  CREATE_JOBS } from "./actionTypes";
+import { SET_USER, FETCH_ALL_JOBS,  CREATE_JOBS ,COMMENT ,FETCH_POST } from "./actionTypes";
 
 export const initialState = {
   user: null,
@@ -17,7 +17,18 @@ const reducer = (state,action) =>{
         ...state,
        posts: action.payload
       }
-       
+      case FETCH_POST:
+        return { ...state, post: action.payload };
+      case COMMENT:
+        return {
+          ...state,
+          posts: state.posts.map((post) => {
+            if (post._id === +action.payload._id) {
+              return action.payload;
+            }
+            return post;
+          }),
+        };   
     case CREATE_JOBS:
       return {
         ...state,
