@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-//const url = 'https://mern-task-test.herokuapp.com/joblist'
-const url = 'http://localhost:5000/joblist'
+const url = 'https://mern-task-test.herokuapp.com/joblist'
+//const url = 'http://localhost:5000/joblist'
 
 
 
